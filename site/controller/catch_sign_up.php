@@ -22,6 +22,13 @@ if(strlen($password1) < 5) {
 } else if($password1 != $password2) {
 	header("Location: sign_up.php?message=passwords_dont_match");
 	die();
+} else {
+	$new_id = create_new_user($password1, $name, $email);
+	if($new_id < 0 ){
+		header("Location: sign_up.php?message=something_went_wrong");
+	} else {
+		header("Location: new_post.php?message=welcome");
+	}
 }
 
 ?>
