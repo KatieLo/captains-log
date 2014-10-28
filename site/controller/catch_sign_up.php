@@ -2,12 +2,14 @@
 
 include("../../model/user.php");
 
+
 // catch the variables from the HTML form at sign_up_html.php
 
 $password1 = $_POST["password1"];
 $password2 = $_POST["password2"];
 $name = $_POST["name"];
 $email = $_POST["email"];
+
 
 /* 
 /* Basic error checking: if password is too short, 

@@ -1,8 +1,18 @@
 <?php
+include("../../model/user.php");
+include("../../model/post.php");
+
+$id = check_session();
+$name = get_name($id);
+$date = get_todays_date();
+$post = get_todays_post($id);
 
 $message = $_GET["message"];
+$notification_text = "";
 if($message == "welcome"){
-	$welcome = "<div>Welcome to Captain's Log! Create your first post.</div>";
+	$notification_text = "<div>The trick to being productive is logging what you accomplish each day. Just write down what you did - even (or especially) if it's not a  lot.</div>";
+} else if($message == "saved"){
+	$notification_text = "<div>Your post was saved.</div>";
 }
 
 include("../view/new_post_html.php");

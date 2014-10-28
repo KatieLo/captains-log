@@ -1,0 +1,36 @@
+.gray(@percent) {
+  color: lighten(@black, percentage(@percent / 100));
+}
+
+.ul-inline-no-style() {
+  margin: 0px;
+  list-style: none;
+  .clearfix;
+  li {
+    float: left;
+    display: block;
+  }
+}
+ 
+.ul-block-no-style() {
+  margin: 0px;
+  list-style: none;
+  .clearfix;
+}
+
+.background-cover(@cover: cover) {
+  -webkit-background-size: @cover;
+  -moz-background-size: @cover;
+  -o-background-size: @cover;
+  background-size: @cover;
+}
+
+.border-radius (@radius: 5px) {
+	-webkit-border-radius: @radius;
+	-moz-border-radius:    @radius;
+	border-radius:         @radius;
+
+	-moz-background-clip:    padding;
+	-webkit-background-clip: padding-box;
+	background-clip:         padding-box;
+}
