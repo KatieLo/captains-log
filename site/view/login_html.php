@@ -22,7 +22,7 @@
   <body>
 
     <div class="container">
-	   	<a href="index.php">Back</a>
+	   	<a href="index.php">Back to homepage</a>
 	   	<?php echo $extra_html; ?>
 	   	<div class="row">
 	   		<div class="col-xs-12 col-sm-6 col-md-8">
@@ -35,15 +35,8 @@
 			        </label> -->
 					<!--<input type="submit" value="Login"/> -->
 					<button class="btn btn-lg btn-primary btn-block" type="submit">Log in</button>
+					<h5>Don't have an account? <a href="login.php">Sign up</a></h5>
 				</form>
-	   		</div>
-	   		<div class="col-xs-12 col-sm-6 col-md-4">
-	   			<h4>Why you'll love Captain's log:</h4>
-	   			<ul>
-	   				<li>Easy to log daily posts</li>
-	   				<li>See and search your past posts</li>
-	   				<li>no spam, no ads, and your data is kept safe and secure</li>
-	   			</ul>
 	   		</div>
 	   	</div>
 		

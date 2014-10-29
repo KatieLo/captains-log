@@ -6197,3 +6197,145 @@ button.close {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
+.form-signin-sub-heading {
+  margin-top: 20px;
+}
+html,
+body#index-page {
+  height: 100%;
+}
+#index-page {
+  background-color: #9ff3e4;
+  color: #555555;
+  text-align: center;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  /* Links */
+  /* Custom default button */
+  /* Extra markup and styles for table-esque vertical and horizontal centering */
+  /* Padding for spacing */
+  /*
+   * Header
+   */
+  /*
+   * Cover
+   */
+  /*
+   * Footer
+   */
+  /*
+   * Affix and center
+   */
+}
+#index-page a,
+#index-page a:hover,
+#index-page a:focus {
+  color: #777777;
+}
+#index-page .btn-default,
+#index-page .btn-default:hover,
+#index-page .btn-default:focus {
+  color: #e0e4cc;
+  text-shadow: none;
+  /* Prevent inheritence from `body` */
+  background-color: #fa6900;
+  border: 1px solid #fa6900;
+}
+#index-page .site-wrapper {
+  display: table;
+  width: 100%;
+  height: 100%;
+  /* For at least Firefox */
+  min-height: 100%;
+  -webkit-box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5);
+}
+#index-page .site-wrapper-inner {
+  display: table-cell;
+  vertical-align: top;
+}
+#index-page .cover-container {
+  margin-right: auto;
+  margin-left: auto;
+}
+#index-page .inner {
+  padding: 30px;
+}
+#index-page .masthead-brand {
+  color: #555555;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+#index-page .masthead-nav li {
+  display: inline-block;
+}
+#index-page .masthead-nav li + li {
+  margin-left: 20px;
+}
+#index-page .masthead-nav li a {
+  padding-right: 0;
+  padding-left: 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #555555;
+  border-bottom: 2px solid transparent;
+}
+#index-page .masthead-nav li a:hover,
+#index-page .masthead-nav li a:focus {
+  background-color: transparent;
+  border-bottom-color: #777777;
+}
+#index-page .masthead-nav .active a,
+#index-page .masthead-nav .active a:hover,
+#index-page .masthead-nav .active a:focus {
+  color: #555555;
+  border-bottom-color: #555555;
+}
+@media (min-width: 768px) {
+  #index-page .masthead-brand {
+    float: left;
+  }
+  #index-page .masthead-nav {
+    float: right;
+  }
+}
+#index-page .cover {
+  padding: 0 20px;
+}
+#index-page .cover .btn-lg {
+  padding: 10px 20px;
+  font-weight: bold;
+}
+#index-page .mastfoot {
+  color: #777777;
+}
+@media (min-width: 768px) {
+  #index-page {
+    /* Pull out the header and footer */
+    /* Start the vertical centering */
+    /* Handle the widths */
+  }
+  #index-page .masthead {
+    position: fixed;
+    top: 0;
+  }
+  #index-page .mastfoot {
+    position: fixed;
+    bottom: 0;
+  }
+  #index-page .site-wrapper-inner {
+    vertical-align: middle;
+  }
+  #index-page .masthead,
+  #index-page .mastfoot,
+  #index-page .cover-container {
+    width: 100%;
+    /* Must be percentage or pixels for horizontal alignment */
+  }
+}
+@media (min-width: 992px) {
+  #index-page .masthead,
+  #index-page .mastfoot,
+  #index-page .cover-container {
+    width: 700px;
+  }
+}
