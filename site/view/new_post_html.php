@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="icon" href="">
 
-    <title>Your Posts</title>
+    <title>Today's log</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../assets/css/styles.css" rel="stylesheet">
@@ -35,7 +35,7 @@
           <ul class="nav navbar-nav navbar-right">
             <li class="active"><a href="index.php">Home</a></li>
             <li><a href="#">About</a></li>
-            <li><a href="view_posts.php">Past Posts</a></li>
+            <li><a href="view_posts.php">Past logs</a></li>
             <li><a href="logout.php">Log out</a></li>
           </ul>
         </div><!--/.nav-collapse -->

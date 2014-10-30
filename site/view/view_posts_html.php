@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="icon" href="">
 
-    <title>Your Posts</title>
+    <title>Your Logs</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../assets/css/styles.css" rel="stylesheet">
@@ -39,23 +39,36 @@
           <ul class="nav navbar-nav navbar-right">
             <li class="active"><a href="index.php">Home</a></li>
             <li><a href="#">About</a></li>
-            <li><a href="new_post.php">Today's post</a></li>
+            <li><a href="new_post.php">Today's log</a></li>
             <li><a href="logout.php">Log out</a></li>
           </ul>
+          
         </div><!--/.nav-collapse -->
       </div>
     </nav>
-    	
+
+    	<form method="post" action="search.php">
+                <input type="text" name="search">
+                <input type="submit" name="submit" value="Search logs">
+              </form>
       <?php
         if(count($posts) > 0){
-          echo '<h3>'.$name.', here are your past posts.</h3>';
+
+          echo '<h3>'.$name.', here are your past logs.</h3>';
           
           foreach($posts as $post){
-            echo '<div class="row">
+            if($post["date"] == $today){
+              echo '<div class="row">
+              <div class="col-xs-4 col-sm-2"><a href="view_post.php?date='.$post["date"].'">Today</a></div>
+              <div class="col-xs-8 col-sm-10">'.$post["content"].'</div>
+              </div>';
+
+            } else {
+              echo '<div class="row">
               <div class="col-xs-4 col-sm-2"><a href="view_post.php?date='.$post["date"].'">'.$post["date"].'</a></div>
               <div class="col-xs-8 col-sm-10">'.$post["content"].'</div>
-            </div>';
-
+              </div>';
+            }
           }
 
         } else {

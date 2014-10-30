@@ -45,7 +45,7 @@ function get_past_post($id, $date){
 function get_all_posts($id){
 	global $dbh;
 
-	$stmt = $dbh->prepare("SELECT content, log_date FROM post WHERE user_id=:user_id");
+	$stmt = $dbh->prepare("SELECT content, log_date FROM post WHERE user_id=:user_id ORDER BY log_date DESC");
 	$stmt->execute(array('user_id'=>$id));
 	
 	$posts = array();
@@ -57,6 +57,24 @@ function get_all_posts($id){
 		$posts[] = $post;
 	}
 	return $posts;
+
+}
+
+function search_posts($search_term, $id){
+	global $dbh;
+
+	$stmt = $dbh->prepare("SELECT content, log_date FROM post WHERE content LIKE :search AND user_id=:user_id");
+	$stmt->execute(array('search' => '%'.$search_term.'%', 'user_id' => $id));
+
+	$results = array();
+
+	foreach ($stmt as $row) {
+		$result = array();
+		$result["content"] =  $row["content"];
+		$result["date"] = $row["log_date"];
+		$results[] = $result;
+	}
+	return $results;
 
 }
 

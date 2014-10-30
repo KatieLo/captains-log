@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="icon" href="">
 
-    <title>Log for <?php echo $date?></title>
+    <title>Search results</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../assets/css/styles.css" rel="stylesheet">
@@ -20,7 +20,11 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+
+
+    <div class="container">
+
+      <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -36,19 +40,48 @@
             <li class="active"><a href="index.php">Home</a></li>
             <li><a href="#">About</a></li>
             <li><a href="new_post.php">Today's log</a></li>
-            <li><a href="view_posts.php">Past logs</a></li>
             <li><a href="logout.php">Log out</a></li>
           </ul>
+          
         </div><!--/.nav-collapse -->
       </div>
     </nav>
 
-    <div class="container">
-    	<h3>Hi <?php echo $name?>, here's your entry for <?php echo $date?>.</h3>
-      <div class="post">
-        <?php echo $post ?>
-      </div>
-    </div>
+    <a href="view_posts.php"><- Back to your logs</a>
+
+    <form method="post" action="search.php">
+      <input type="text" name="search" value="<?php echo $search_term; ?>">
+      <input type="submit" name="submit" value="Search">
+    </form>
+    	
+      <?php
+        if(count($results) > 0){
+          echo '<h3>Search results for "'.$search_term.'"</h3>';
+          
+          foreach($results as $result){
+            if($result["date"] == $today){
+              echo '<div class="row">
+              <div class="col-xs-4 col-sm-2"><a href="view_post.php?date='.$result["date"].'">Today</a></div>
+              <div class="col-xs-8 col-sm-10">'.$result["content"].'</div>
+              </div>';
+
+            } else {
+              echo '<div class="row">
+              <div class="col-xs-4 col-sm-2"><a href="view_post.php?date='.$result["date"].'">'.$result["date"].'</a></div>
+              <div class="col-xs-8 col-sm-10">'.$result["content"].'</div>
+              </div>';
+            }
+            
+
+          }
+
+        } else {
+          echo '<h3>There aren\'t any results that match "'.$search_term.'"</h3>';
+        }
+      ?>
+
+
+    </div> <!-- /container -->
 
   </body>
 </html>
