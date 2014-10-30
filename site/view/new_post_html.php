@@ -20,19 +20,37 @@
   </head>
 
   <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.php">Captain's Log</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="index.php">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="view_posts.php">Past Posts</a></li>
+            <li><a href="logout.php">Log out</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
 
     <div class="container">
-      <a href="view_posts.php">See all your posts</a>
-      <a href="logout.php">Logout</a>
-
-    	<h3>Hi, <?php echo $name?>.</h3>
+    	<h3>Hi Captain <?php echo $name?>! What did you do today?</h3>
  
-		<?php echo $notification_text; ?>
+		  <?php echo $notification_text; ?>
 
 		<form action="catch_new_post.php" method="post">
-			<h4>Today</h4>
-			<textarea type="text" name="post"><?php echo $post ?></textarea>
-			<button type="submit">Save</button>
+			
+			<textarea rows="15" type="text" name="post"><?php echo $post ?></textarea><br>
+			<button class="btn btn-lg btn-default " type="submit">Save</button>
 		</form>
 
     </div> <!-- /container -->

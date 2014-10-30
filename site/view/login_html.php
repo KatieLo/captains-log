@@ -19,28 +19,43 @@
     <![endif]-->
   </head>
 
-  <body>
+  
 
-    <div class="container">
-	   	<a href="index.php">Back to homepage</a>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.php">Captain's Log</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="index.php">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="sign_up.php">Sign up</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+  </nav>
+  
+    <div class="container form-container">	
 	   	<?php echo $extra_html; ?>
-	   	<div class="row">
-	   		<div class="col-xs-12 col-sm-6 col-md-8">
 	   			<form class="form-signin" action="catch_login.php" method="post">
 					<h2 class="form-signin-heading">Please log in</h2>
-					<input type="text" name="email" value="" placeholder="Email address" class="form-control"/><br>
-					<input type="password" name="password" value="" class="form-control" placeholder="Password"/><br>
+					<input type="text" name="email" value="" placeholder="Email address" class="form-control"/>
+					<input type="password" name="password" value="" class="form-control" placeholder="Password"/>
 					<!--<label class="checkbox">
 			          <input type="checkbox" value="remember-me"> Remember me
 			        </label> -->
 					<!--<input type="submit" value="Login"/> -->
-					<button class="btn btn-lg btn-primary btn-block" type="submit">Log in</button>
-					<h5>Don't have an account? <a href="login.php">Sign up</a></h5>
+					<button class="btn btn-lg btn-default btn-block" type="submit">Log in</button>
+					<h5>Don't have an account? <a href="sign_up.php">Sign up</a></h5>
 				</form>
-	   		</div>
-	   	</div>
-		
-		
     </div> <!-- /container -->
 
   </body>

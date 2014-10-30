@@ -56,7 +56,7 @@
 
           <div class="mastfoot">
             <div class="inner">
-            	This is footer text
+              Made with love by <a href="https://twitter.com/katie_womers">@katie_womers</a>
             </div>
           </div>
 

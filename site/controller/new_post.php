@@ -3,7 +3,7 @@ include("../../model/user.php");
 include("../../model/post.php");
 
 $id = check_session();
-$name = get_name($id);
+$name = ucwords(get_name($id));
 $date = get_todays_date();
 $post = get_todays_post($id);
 

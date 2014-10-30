@@ -20,12 +20,34 @@
   </head>
 
   <body>
-    <a href="view_posts.php">Back to your posts</a>
-    <a href="logout.php">Logout</a>
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.php">Captain's Log</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="index.php">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="new_post.php">Today's post</a></li>
+            <li><a href="view_posts.php">Past Posts</a></li>
+            <li><a href="logout.php">Log out</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
 
     <div class="container">
-    	<h3>Hi <?php echo $name?>, here's your log entry for <?php echo $date?>.</h3>
-      <p><?php echo $post ?></p>
+    	<h3>Hi <?php echo $name?>, here's your entry for <?php echo $date?>.</h3>
+      <div class="post">
+        <?php echo $post ?>
+      </div>
     </div>
 
   </body>

@@ -20,13 +20,32 @@
   </head>
 
   <body>
+  	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.php">Captain's Log</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="index.php">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="login.php">Log in</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+  	</nav>
 
-    <div class="container">
-	   	<a href="index.php">Back to homepage</a>
-	   	<a href="login.php">Log in</a>
+    <div class="container form-container">
+	   	
 	   	<?php echo $extra_html; ?>
 	   	<div class="row">
-	   		<div class="col-xs-12 col-sm-6 col-md-8">
+	   		<div class="col-xs-12 col-sm-6">
 	   			<form class="form-signin" action="catch_sign_up.php" method="post">
 					<h2 class="form-signin-heading">Sign Up</h2>
 					<input type="text" name="name" value="" placeholder="First name" class="form-control"/><br>
@@ -37,12 +56,12 @@
 			          <input type="checkbox" value="remember-me"> Remember me
 			        </label> -->
 					<!--<input type="submit" value="Login"/> -->
-					<button class="btn btn-lg btn-primary btn-block" type="submit">Sign up</button>
+					<button class="btn btn-lg btn-default btn-block" type="submit">Sign up</button>
 					<h5>Already have an account? <a href="login.php">Log in </a></h5>
 				</form>
 				
 	   		</div>
-	   		<div class="col-xs-12 col-sm-6 col-md-4 form-signin">
+	   		<div class="col-xs-12 col-sm-6 form-signin">
 	   			<h4 class="form-signin-sub-heading">Why you'll love Captain's log:</h4>
 	   			<ul>
 	   				<li>Easy to log daily posts</li>
