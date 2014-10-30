@@ -59,16 +59,17 @@
           echo '<h3>Search results for "'.$search_term.'"</h3>';
           
           foreach($results as $result){
+            $highlighted_content = highlight_text($result["content"], $search_term);
             if($result["date"] == $today){
               echo '<div class="row">
               <div class="col-xs-4 col-sm-2"><a href="view_post.php?date='.$result["date"].'">Today</a></div>
-              <div class="col-xs-8 col-sm-10">'.$result["content"].'</div>
+              <div class="col-xs-8 col-sm-10">'.$highlighted_content.'</div>
               </div>';
 
             } else {
               echo '<div class="row">
               <div class="col-xs-4 col-sm-2"><a href="view_post.php?date='.$result["date"].'">'.$result["date"].'</a></div>
-              <div class="col-xs-8 col-sm-10">'.$result["content"].'</div>
+              <div class="col-xs-8 col-sm-10">'.$highlighted_content.'</div>
               </div>';
             }
             

@@ -63,7 +63,7 @@ function get_all_posts($id){
 function search_posts($search_term, $id){
 	global $dbh;
 
-	$stmt = $dbh->prepare("SELECT content, log_date FROM post WHERE content LIKE :search AND user_id=:user_id");
+	$stmt = $dbh->prepare("SELECT content, log_date FROM post WHERE content LIKE :search AND user_id=:user_id ORDER BY log_date DESC");
 	$stmt->execute(array('search' => '%'.$search_term.'%', 'user_id' => $id));
 
 	$results = array();
@@ -76,6 +76,12 @@ function search_posts($search_term, $id){
 	}
 	return $results;
 
+}
+
+// takes in content, $text, and a phrase to highlight, $search, and returns the content with the phrase highlighted
+function highlight_text($text, $search){
+	$text = preg_replace("/($search)/i","<span style='font-weight:bold'>\${1}</span>",$text);
+	return $text;
 }
 
 function get_todays_date(){
