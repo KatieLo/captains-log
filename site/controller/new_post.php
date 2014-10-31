@@ -6,7 +6,6 @@ $id = check_session();
 $name = ucwords(get_name($id));
 $date = get_todays_date();
 $post = get_todays_post($id);
-
 $message = $_GET["message"];
 $notification_text = "";
 if($message == "welcome"){
@@ -15,6 +14,8 @@ if($message == "welcome"){
 	$notification_text = "<div>Your post was saved.</div>";
 }
 
+include("../view/header_html.php");
 include("../view/new_post_html.php");
+include("../view/footer_html.php");
 
 ?>

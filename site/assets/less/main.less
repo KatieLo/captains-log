@@ -2,15 +2,30 @@
  * Globals
  */
 
+html, body {
+	margin:0;
+	padding:0;
+	height:100%;
+}
+ 
+
 /* Links */
 a, a:hover, a:focus {
 	color: @blue;
 }
 
 body {
-	background-color: @primary-light;
- 	color: @gray;
- 	padding-top: 70px;
+	background-color: @background-color;
+ 	color: @light;
+ 	.wrapper {
+		min-height:100%;
+		position:relative;
+ 	}
+}
+
+.content {
+	padding:10px;
+	padding-bottom:80px;   /* Height of the footer element */
 }
 
 /* Custom default button */
@@ -19,8 +34,8 @@ body {
 .btn-default:focus {
 	color: @light;
 	text-shadow: none; /* Prevent inheritence from `body` */
-	background-color: @orange;
-	border: 1px solid @orange;
+	background-color: @primary;
+	border: 3px solid @light;
 }
 textarea, .post {
 	background-color: @paper;
@@ -36,8 +51,4 @@ textarea, .post {
 	@media(min-width: 992px){
 		width: 70%;
 	}
-}
-
-.post {
-	height: 300px;
 }

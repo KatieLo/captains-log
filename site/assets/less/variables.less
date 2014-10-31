@@ -1,19 +1,30 @@
 
 
-@primary: #98EEDE;
+// @primary: #98EEDE;
+@primary: #52a4d7;
 @primary-light: lighten(@primary, 10%);
 @primary-dark: darken(@primary, 10%);
 @primary-darken: darken(@primary, 30%);
-@background-color: @primary-light;
+//@background-color: @primary-light;
+@background-color: @primary;
 
-@orange: #FA6900;
-@light-orange: #F38630;
-@light: #E0E4CC;
-@blue: #047BCA;
+// @orange: #FA6900;
+@orange: #fef00e;
+//@light-orange: #F38630;
+@light-orange: @primary-darken;
+//@light: #E0E4CC;
+@light: #fff;
+//@blue: #047BCA;
+@blue: #35455c;
 @paper: #FFFAE4;
 @paper-darken: darken(@paper, 10%);
 @dark-blue: #000F55;
 
 //Overriding bootstrap variables
 
-@navbar-inverse-bg:  @primary-light;
+@navbar-inverse-bg:  @primary;
+@navbar-inverse-color: @light;
+@navbar-inverse-link-color: @light;                
+@navbar-inverse-link-hover-color: @orange;
+@navbar-inverse-link-active-color: @light;   
+@navbar-inverse-link-active-bg:  @navbar-inverse-bg;
