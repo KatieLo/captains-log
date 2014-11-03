@@ -6246,6 +6246,11 @@ footer a:hover,
 footer a:focus {
   color: #ffffff;
 }
+a,
+a:hover,
+a:focus {
+  color: #fef00e;
+}
 .form-container {
   padding-top: 60px;
   padding-bottom: 40px;
@@ -6339,6 +6344,9 @@ body#index-page {
     width: 700px;
   }
 }
+#index-page .cover-heading {
+  color: #fef00e;
+}
 #index-page .inner {
   padding: 30px;
 }
@@ -6398,21 +6406,21 @@ body#index-page {
 #index-page .masthead-nav li a:hover,
 #index-page .masthead-nav li a:focus {
   background-color: transparent;
-  border-bottom-color: #777777;
+  border-bottom-color: #ffffff;
 }
 #index-page .masthead-nav .active a,
 #index-page .masthead-nav .active a:hover,
 #index-page .masthead-nav .active a:focus {
   color: #fef00e;
-  border-bottom-color: #555555;
+  border-bottom-color: #fef00e;
 }
 #index-page .mastfoot {
-  color: #777777;
+  color: #ffffff;
 }
 #index-page .mastfoot a,
 #index-page .mastfoot a:hover,
 #index-page .mastfoot a:focus {
-  color: #777777;
+  color: #ffffff;
 }
 @media (min-width: 768px) {
   #index-page .mastfoot {

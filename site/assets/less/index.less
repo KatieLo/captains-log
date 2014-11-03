@@ -34,6 +34,9 @@ body#index-page {
       width: 700px;
     }
   }
+  .cover-heading {
+    color: @orange;
+  }
   /* Padding for spacing */
   .inner {
     padding: 30px;
@@ -95,15 +98,15 @@ body#index-page {
         border-bottom: 2px solid transparent;
         &:hover, &:focus {
           background-color: transparent;
-          border-bottom-color: @gray-light;
-          border-bottom-color: @gray-light;
+          border-bottom-color: @light;
+          border-bottom-color: @light;
         }
       } 
     }
     .active {
       a, a:hover, a:focus {
         color: @orange;
-        border-bottom-color: @gray;
+        border-bottom-color: @orange;
       }
     } 
   }
@@ -113,9 +116,9 @@ body#index-page {
    */
 
   .mastfoot {
-    color: @gray-light;
+    color: @light;
     a, a:hover, a:focus {
-      color: @gray-light;
+      color: @light;
     }
     @media (min-width: 768px){
         position: fixed;
