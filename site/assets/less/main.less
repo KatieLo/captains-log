@@ -11,31 +11,53 @@ html, body {
 
 /* Links */
 a, a:hover, a:focus {
-	color: @blue;
+	color: @primary-dark;
 }
 
 body {
-	background-color: @background-color;
- 	color: @light;
+	
+ 	color: @gray;
  	.wrapper {
 		min-height:100%;
 		position:relative;
+		background-color: @background-color;
  	}
 }
 
 .content {
 	padding:10px;
 	padding-bottom:80px;   /* Height of the footer element */
+	h3 {
+		//color: @secondary;
+		margin-bottom: 25px;
+	}
+	.navbar-form {
+		padding: 0;
+	}
 }
 
 /* Custom default button */
 .btn-default,
 .btn-default:hover,
 .btn-default:focus {
-	color: @light;
+	color: @secondary;
 	text-shadow: none; /* Prevent inheritence from `body` */
-	background-color: @primary;
-	border: 3px solid @light;
+	background-color: @light;
+	border: 3px solid @secondary;
+	font-size: 23px;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+.saved {
+	display: none;
+	height: 50px;
+	width: 200px;
+	background-color: @state-success-bg;
+	color: @state-success-text;
+	border: @state-success-border 1px solid;
+	padding: 13px;
+	margin: 20px 0;
 }
 textarea, .post {
 	background-color: @paper;

@@ -3,6 +3,8 @@ html,
 body#index-page {
   height: 100%;
   padding-top: 0; 
+  background-color: @primary;
+  color: #fff;
 }
 
 #index-page {
@@ -43,6 +45,16 @@ body#index-page {
     p, h1 {
       text-shadow: 0 1px 3px rgba(0,0,0,.5);
     }
+  }
+
+  /* Custom default button */
+  .btn-default,
+  .btn-default:hover,
+  .btn-default:focus {
+    color: @light;
+    text-shadow: none; /* Prevent inheritence from `body` */
+    background-color: @primary;
+    border: 3px solid @light;
   }
 
   /*

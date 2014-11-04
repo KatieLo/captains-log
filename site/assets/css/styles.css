@@ -1145,10 +1145,10 @@ a.text-primary:hover {
   color: #3071a9;
 }
 .text-success {
-  color: #3c763d;
+  color: #10b21e;
 }
 a.text-success:hover {
-  color: #2b542c;
+  color: #0c8316;
 }
 .text-info {
   color: #31708f;
@@ -1176,10 +1176,10 @@ a.bg-primary:hover {
   background-color: #3071a9;
 }
 .bg-success {
-  background-color: #dff0d8;
+  background-color: #daffcb;
 }
 a.bg-success:hover {
-  background-color: #c1e2b3;
+  background-color: #b6ff98;
 }
 .bg-info {
   background-color: #d9edf7;
@@ -2156,14 +2156,14 @@ table th[class*="col-"] {
 .table > thead > tr.success > th,
 .table > tbody > tr.success > th,
 .table > tfoot > tr.success > th {
-  background-color: #dff0d8;
+  background-color: #daffcb;
 }
 .table-hover > tbody > tr > td.success:hover,
 .table-hover > tbody > tr > th.success:hover,
 .table-hover > tbody > tr.success:hover > td,
 .table-hover > tbody > tr:hover > .success,
 .table-hover > tbody > tr.success:hover > th {
-  background-color: #d0e9c6;
+  background-color: #c8ffb1;
 }
 .table > thead > tr > td.info,
 .table > tbody > tr > td.info,
@@ -2539,25 +2539,25 @@ select[multiple].input-lg {
 .has-success .checkbox,
 .has-success .radio-inline,
 .has-success .checkbox-inline {
-  color: #3c763d;
+  color: #10b21e;
 }
 .has-success .form-control {
-  border-color: #3c763d;
+  border-color: #10b21e;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 .has-success .form-control:focus {
-  border-color: #2b542c;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #67b168;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #67b168;
+  border-color: #0c8316;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #3bed4a;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #3bed4a;
 }
 .has-success .input-group-addon {
-  color: #3c763d;
-  border-color: #3c763d;
-  background-color: #dff0d8;
+  color: #10b21e;
+  border-color: #10b21e;
+  background-color: #daffcb;
 }
 .has-success .form-control-feedback {
-  color: #3c763d;
+  color: #10b21e;
 }
 .has-warning .help-block,
 .has-warning .control-label,
@@ -4619,15 +4619,15 @@ a.thumbnail.active {
   color: inherit;
 }
 .alert-success {
-  background-color: #dff0d8;
-  border-color: #d6e9c6;
-  color: #3c763d;
+  background-color: #daffcb;
+  border-color: #9fff4c;
+  color: #10b21e;
 }
 .alert-success hr {
-  border-top-color: #c9e2b3;
+  border-top-color: #91ff32;
 }
 .alert-success .alert-link {
-  color: #2b542c;
+  color: #0c8316;
 }
 .alert-info {
   background-color: #d9edf7;
@@ -4866,26 +4866,26 @@ a.list-group-item:focus {
   color: #e1edf7;
 }
 .list-group-item-success {
-  color: #3c763d;
-  background-color: #dff0d8;
+  color: #10b21e;
+  background-color: #daffcb;
 }
 a.list-group-item-success {
-  color: #3c763d;
+  color: #10b21e;
 }
 a.list-group-item-success .list-group-item-heading {
   color: inherit;
 }
 a.list-group-item-success:hover,
 a.list-group-item-success:focus {
-  color: #3c763d;
-  background-color: #d0e9c6;
+  color: #10b21e;
+  background-color: #c8ffb1;
 }
 a.list-group-item-success.active,
 a.list-group-item-success.active:hover,
 a.list-group-item-success.active:focus {
   color: #fff;
-  background-color: #3c763d;
-  border-color: #3c763d;
+  background-color: #10b21e;
+  border-color: #10b21e;
 }
 .list-group-item-info {
   color: #31708f;
@@ -5198,22 +5198,22 @@ a.list-group-item-danger.active:focus {
   border-bottom-color: #428bca;
 }
 .panel-success {
-  border-color: #d6e9c6;
+  border-color: #9fff4c;
 }
 .panel-success > .panel-heading {
-  color: #3c763d;
-  background-color: #dff0d8;
-  border-color: #d6e9c6;
+  color: #10b21e;
+  background-color: #daffcb;
+  border-color: #9fff4c;
 }
 .panel-success > .panel-heading + .panel-collapse > .panel-body {
-  border-top-color: #d6e9c6;
+  border-top-color: #9fff4c;
 }
 .panel-success > .panel-heading .badge {
-  color: #dff0d8;
-  background-color: #3c763d;
+  color: #daffcb;
+  background-color: #10b21e;
 }
 .panel-success > .panel-footer + .panel-collapse > .panel-body {
-  border-bottom-color: #d6e9c6;
+  border-bottom-color: #9fff4c;
 }
 .panel-info {
   border-color: #bce8f1;
@@ -6176,34 +6176,53 @@ body {
 a,
 a:hover,
 a:focus {
-  color: #35455c;
+  color: #2e8dc8;
 }
 body {
-  background-color: #52a4d7;
-  color: #ffffff;
+  color: #555555;
 }
 body .wrapper {
   min-height: 100%;
   position: relative;
+  background-color: #ffffff;
 }
 .content {
   padding: 10px;
   padding-bottom: 80px;
   /* Height of the footer element */
 }
+.content h3 {
+  margin-bottom: 25px;
+}
+.content .navbar-form {
+  padding: 0;
+}
 /* Custom default button */
 .btn-default,
 .btn-default:hover,
 .btn-default:focus {
-  color: #ffffff;
+  color: #e5563d;
   text-shadow: none;
   /* Prevent inheritence from `body` */
-  background-color: #52a4d7;
-  border: 3px solid #ffffff;
+  background-color: #ffffff;
+  border: 3px solid #e5563d;
+  font-size: 23px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.saved {
+  display: none;
+  height: 50px;
+  width: 200px;
+  background-color: #daffcb;
+  color: #10b21e;
+  border: #9fff4c 1px solid;
+  padding: 13px;
+  margin: 20px 0;
 }
 textarea,
 .post {
-  background-color: #fffae4;
+  background-color: #fffcec;
   color: #000f55;
   font-size: 1.5em;
   padding: 20px;
@@ -6234,7 +6253,7 @@ footer {
   padding: 10px;
   padding-bottom: 20px;
   text-align: center;
-  color: #ffffff;
+  color: #555555;
   width: 100%;
   height: 80px;
   position: absolute;
@@ -6244,12 +6263,7 @@ footer {
 footer a,
 footer a:hover,
 footer a:focus {
-  color: #ffffff;
-}
-a,
-a:hover,
-a:focus {
-  color: #fef00e;
+  color: #555555;
 }
 .form-container {
   padding-top: 60px;
@@ -6296,11 +6310,14 @@ html,
 body#index-page {
   height: 100%;
   padding-top: 0;
+  background-color: #52a4d7;
+  color: #fff;
 }
 #index-page {
   text-align: center;
   /* Extra markup and styles for table-esque vertical and horizontal centering */
   /* Padding for spacing */
+  /* Custom default button */
   /*
    * Cover
    */
@@ -6353,6 +6370,15 @@ body#index-page {
 #index-page .inner p,
 #index-page .inner h1 {
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+#index-page .btn-default,
+#index-page .btn-default:hover,
+#index-page .btn-default:focus {
+  color: #ffffff;
+  text-shadow: none;
+  /* Prevent inheritence from `body` */
+  background-color: #52a4d7;
+  border: 3px solid #ffffff;
 }
 #index-page .cover {
   padding: 0 20px;
