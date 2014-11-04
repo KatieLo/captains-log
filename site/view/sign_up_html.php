@@ -11,6 +11,7 @@
     <title>Sign Up to Captain's Log</title>
 
     <link href="../assets/css/styles.css" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -19,7 +20,7 @@
     <![endif]-->
   </head>
 
-  <body>
+  <body class="signup">
   	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
@@ -72,6 +73,6 @@
 		
 		
     </div> <!-- /container -->
-
+    <script src="../assets/js/script.js"></script>
   </body>
 </html>

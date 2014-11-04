@@ -1,8 +1,10 @@
 <div class="container content">
-  <form method="post" action="search.php">
-            <input type="text" name="search">
-            <input type="submit" name="submit" value="Search logs">
-          </form>
+      <form method="post" action="search.php" class="navbar-form" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="">
+        </div>
+        <button type="submit" class="btn">Search logs</button>
+      </form>
   <?php
     if(count($posts) > 0){
 

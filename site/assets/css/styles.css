@@ -6201,11 +6201,11 @@ body .wrapper {
 .btn-default,
 .btn-default:hover,
 .btn-default:focus {
-  color: #e5563d;
+  color: #52a4d7;
   text-shadow: none;
   /* Prevent inheritence from `body` */
   background-color: #ffffff;
-  border: 3px solid #e5563d;
+  border: 3px solid #52a4d7;
   font-size: 23px;
   font-weight: 600;
   text-transform: uppercase;
