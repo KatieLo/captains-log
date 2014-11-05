@@ -42,14 +42,22 @@
   	</nav>
 
     <div class="container form-container">
-	   	
-	   	<?php echo $extra_html; ?>
+	     <?php if($extra_html == ""){?>
+            <div class="error alert alert-danger hidden"></div>
+          <?php } else { ?>
+            <div class="error alert alert-danger"><?php echo $extra_html; ?></div>
+          <?php }?>
+          <div class="warning alert alert-warning hidden"></div>
 	   	<div class="row">
 	   		<div class="col-xs-12 col-sm-6">
-	   			<form class="form-signin" action="catch_sign_up.php" method="post">
+	   			<form id="sign_up_form" class="form-signin" action="catch_sign_up.php" method="post">
 					<h2 class="form-signin-heading">Sign Up</h2>
 					<input type="text" name="name" value="" placeholder="First name" class="form-control"/><br>
-					<input type="text" name="email" value="" placeholder="Email address" class="form-control"/><br>
+          <div class="form-group">
+            <label class="control-label sr-only" for="inputSuccess5">Hidden label</label>
+					 <input type="text" name="email" value="" placeholder="Email address" class="form-control"/>
+           <span></span>
+          </div>
 					<input type="password" name="password1" value="" class="form-control" placeholder="Password"/><br>
 					<input type="password" name="password2" value="" class="form-control" placeholder="Retype password"/><br>
 					<!--<label class="checkbox">

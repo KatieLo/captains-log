@@ -62,20 +62,41 @@ function get_all_posts($id){
 
 function search_posts($search_term, $id){
 	global $dbh;
+	$search_term = trim($search_term);
 
 	$stmt = $dbh->prepare("SELECT content, log_date FROM post WHERE content LIKE :search AND user_id=:user_id ORDER BY log_date DESC");
 	$stmt->execute(array('search' => '%'.$search_term.'%', 'user_id' => $id));
 
 	$results = array();
-
+	$seach_result_substring_lenght = 200;
 	foreach ($stmt as $row) {
 		$result = array();
 		$result["content"] =  $row["content"];
+
+		$pos = stripos($result["content"], $search_term);
+		$endPos = $pos + strlen($search_term) + ($seach_result_substring_lenght/2);
+		$startPos = $pos - ($seach_result_substring_lenght/2);
+
+		if($startPos < 0){
+			$startPos = 0;
+		} 
+
+		if($endPos > strlen($result["content"]) - 1){
+			$endPos = strlen($result["content"]);
+		}
+		
+		$search_match_substring = substr($result["content"], $startPos, $endPos - $startPos);
+		
+		if($startPos > 0){
+			$result["content"] = "...".$search_match_substring;
+		} else {
+			$result["content"] = $search_match_substring;
+		}
+
 		$result["date"] = $row["log_date"];
 		$results[] = $result;
 	}
 	return $results;
-
 }
 
 // takes in content, $text, and a phrase to highlight, $search, and returns the content with the phrase highlighted

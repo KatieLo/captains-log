@@ -113,6 +113,18 @@ function check_login($email, $password) {
 	}
 }
 
+function check_email($email) {
+	global $dbh;
+	$exists = false;
+
+	$stmt = $dbh -> prepare("SELECT id FROM user WHERE email=:email");
+	$stmt -> execute(array('email' => $email));
+	foreach ($stmt as $row) {
+		$exists = true;
+	}
+	return $exists;
+}
+
 // Copied from http://stackoverflow.com/questions/4356289/php-random-string-generator
 function generateRandomString($length = 10) {
     $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';

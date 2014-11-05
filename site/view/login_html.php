@@ -44,8 +44,12 @@
   </nav>
   
     <div class="container form-container">	
-	   	<?php echo $extra_html; ?>
-	   			<form class="form-signin" action="catch_login.php" method="post">
+        <?php if($extra_html == ""){?>
+          <div class="error alert alert-danger hidden"></div>
+        <?php } else { ?>
+          <div class="error alert alert-danger"><?php echo $extra_html; ?></div>
+        <?php }?>
+	   			<form id="login_form" class="form-signin" action="catch_login.php" method="post">
 					<h2 class="form-signin-heading">Please log in</h2>
 					<input type="text" name="email" value="" placeholder="Email address" class="form-control"/>
 					<input type="password" name="password" value="" class="form-control" placeholder="Password"/>
