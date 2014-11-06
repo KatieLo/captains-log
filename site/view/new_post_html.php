@@ -7,10 +7,11 @@
   <div class="saved">
   	Your log has been saved.
   </div>
+  <div class="error alert alert-danger hidden"></div>
 
 <form id="new_post_form" action="catch_new_post.php" method="post">
 	
-	<textarea type="text" name="post"><?php echo $post ?></textarea><br>
+	<textarea id="new-post-textarea" type="text" name="post"><?php echo $post ?></textarea><br>
 	<button class="btn btn-lg btn-default save" type="submit">Save</button>
 </form>
 
