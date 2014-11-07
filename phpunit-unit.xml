@@ -1,0 +1,16 @@
+<!-- Configuration File for Unit Tests -->
+
+<phpunit
+	printerFile="vendor/whatthejeff/nyancat-phpunit-resultprinter/src/NyanCat/PHPUnit/ResultPrinter.php"
+	printerClass="NyanCat\PHPUnit\ResultPrinter"
+	colors="true"
+	backupGlobals="true"
+	processIsolation="false"> 
+ <!-- other stuff goes here -->
+ 	<testsuites>
+        <testsuite name="Test Suite">
+            <directory>./tests</directory>
+        </testsuite>
+    </testsuites>
+
+</phpunit>

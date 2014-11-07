@@ -7919,9 +7919,12 @@ textarea,
 }
 .navbar-inverse .navbar-brand {
   padding: 10px;
-  color: #fef00e;
-  font-weight: bold;
+  color: #ffffff;
+  font-family: 'Ubuntu', sans-serif;
   font-size: 2em;
+}
+.navbar-inverse .navbar-brand:hover {
+  color: #fef00e;
 }
 footer {
   padding: 10px;
@@ -8081,8 +8084,10 @@ body#index-page {
   }
 }
 #index-page .masthead-brand {
-  color: #fef00e;
-  margin-top: 10px;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 2em;
+  color: #ffffff;
+  margin-top: 2px;
   margin-bottom: 10px;
 }
 @media (min-width: 768px) {
@@ -8105,7 +8110,6 @@ body#index-page {
   padding-right: 0;
   padding-left: 0;
   font-size: 16px;
-  font-weight: bold;
   color: #ffffff;
   border-bottom: 2px solid transparent;
 }

@@ -1,0 +1,10 @@
+<!-- Configuration File for Integration Tests -->
+
+<phpunit
+	printerFile="vendor/whatthejeff/nyancat-phpunit-resultprinter/src/NyanCat/PHPUnit/ResultPrinter.php"
+	printerClass="NyanCat\PHPUnit\ResultPrinter"
+
+	backupGlobals="true"
+	processIsolation="true"> 
+ <!-- other stuff goes here -->
+</phpunit>

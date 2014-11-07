@@ -13,6 +13,8 @@
 
     <!-- Bootstrap core CSS -->
     <link href="../assets/css/styles.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu:300' rel='stylesheet' type='text/css'>
+
 
     <!-- Custom styles for this template -->
     <link href="cover.css" rel="stylesheet">
@@ -37,9 +39,8 @@
 
               <h3 class="masthead-brand">Captain's Log</h3>
               <ul class="nav masthead-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="login.php">Log in</a></li>
                 <li><a href="#">About</a></li>
+                <li><a href="login.php">Log in</a></li>
               </ul>
             </div>
           </div>

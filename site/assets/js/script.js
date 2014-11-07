@@ -105,7 +105,7 @@ $( document ).ready(function() {
 
 function resizeTextarea() {
     var initialHeight = "300px";
-    var limit = 600;
+    var limit = $(window).height() - 225;
     $("#new-post-textarea").css("height",initialHeight);
     var scrollHeight = $("#new-post-textarea").prop('scrollHeight');
     var newHeight = Math.min(scrollHeight, limit) + "px";
