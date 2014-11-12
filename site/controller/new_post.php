@@ -10,6 +10,7 @@ $m = new Mustache_Engine(array(
 
 // Prepare data
 $data = array();
+$id = check_session();
 $has_message = false;
 $message = $_GET["message"];
 $name = ucwords(get_name($id));
@@ -18,7 +19,7 @@ $post = get_todays_post($id);
 $notification_text = "";
 
 $data["logged-in"] = false;
-$id = check_session();
+
 if($id > -1){
 	$data["logged-in"] = true;
 } else {
