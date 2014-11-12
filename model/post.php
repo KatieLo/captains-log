@@ -1,6 +1,6 @@
 <?php
 
-include("lib.php");
+require_once("lib.php");
 
 function save_post($post, $id){
 	global $dbh;
@@ -45,7 +45,7 @@ function get_past_post($id, $date){
 function get_all_posts($id){
 	global $dbh;
 
-	$stmt = $dbh->prepare("SELECT content, log_date FROM post WHERE user_id=:user_id ORDER BY log_date DESC");
+	$stmt = $dbh->prepare("SELECT content, log_date FROM post WHERE user_id=:user_id ORDER BY id DESC");
 	$stmt->execute(array('user_id'=>$id));
 	
 	$posts = array();

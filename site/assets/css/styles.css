@@ -7942,8 +7942,10 @@ footer a:hover,
 footer a:focus {
   color: #555555;
 }
+.navbar {
+  margin-bottom: 10px;
+}
 .form-container {
-  padding-top: 60px;
   padding-bottom: 40px;
 }
 .alert-placeholder {
@@ -7956,6 +7958,7 @@ footer a:focus {
 }
 .form-signin .form-signin-heading,
 .form-signin .checkbox {
+  margin-top: 50px;
   margin-bottom: 10px;
 }
 .form-signin .checkbox {
@@ -7987,7 +7990,7 @@ footer a:focus {
   top: 4px;
 }
 .form-signin-sub-heading {
-  margin-top: 20px;
+  margin-top: 50px;
 }
 html,
 body#index-page {

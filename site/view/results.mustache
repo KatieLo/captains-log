@@ -1,0 +1,26 @@
+
+  <div class="container content">
+     <form method="post" action="search.php" class="navbar-form" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" name="search" placeholder="{{search_term}}">
+        </div>
+        <button type="submit" class="btn">Search logs</button>
+      </form>
+
+      {{#has_results}}
+        <h3>Search results for {{search_term}}</h3>
+        {{#results}}
+          <div class="row">
+             <div class="col-xs-4 col-sm-2"><a href="view_post.php?date={{date}}">{{link_text}}</a></div>
+             <div class="col-xs-8 col-sm-10">{{{highlighted_content}}}...</div>
+          </div>
+        {{/results}}
+      {{/has_results}}
+      {{^has_results}}
+        <h3>There aren't any results that match {{search_term}}.</h3>
+      {{/has_results}}
+
+    </div> <!-- /container -->
+
+  </body>
+</html>

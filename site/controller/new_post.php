@@ -1,6 +1,15 @@
 <?php
+require_once '../../vendor/autoload.php';
 include("../../model/user.php");
 include("../../model/post.php");
+
+// Init template engine
+$m = new Mustache_Engine(array(
+    'loader' => new Mustache_Loader_FilesystemLoader(dirname(__FILE__).'/../view')
+));
+
+// Prepare data
+$data = array();
 
 $id = check_session();
 $name = ucwords(get_name($id));
@@ -8,14 +17,29 @@ $date = get_todays_date();
 $post = get_todays_post($id);
 $message = $_GET["message"];
 $notification_text = "";
-if($message == "welcome"){
-	$notification_text = "<div>The trick to being productive is logging what you accomplish each day. Just write down what you did - even (or especially) if it's not a  lot.</div>";
-} else if($message == "saved"){
-	$notification_text = "<div>Your post was saved.</div>";
-}
+$has_message = false;
 
-include("../view/header_html.php");
-include("../view/new_post_html.php");
-include("../view/footer_html.php");
+if($message == "welcome"){
+	$notification_text = "The trick to being productive is logging what you accomplish each day. Just write down what you did - even (or especially) if it's not a  lot.</div>";
+	$has_message = true;
+} else if($message == "saved"){
+	$notification_text = "Your post was saved.";
+	$has_message = true;
+}
+if($id != -1){
+	$data["logged-in"] = true;
+}
+$data["notification_text"] = $notification_text;
+$data["has_message"] = $has_message;
+$data["name"] = $name;
+$data["date"] = $date;
+$data["post"] = $post;
+
+
+
+// Render template
+echo $m->render('header', $data); 
+echo $m->render('new_post', $data); 
+echo $m->render('footer'); 
 
 ?>

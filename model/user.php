@@ -1,6 +1,6 @@
 <?php
 
-include("lib.php");
+require_once("lib.php");
 
 /*
 /* Function creates a new User object and saves it to the Database, 
