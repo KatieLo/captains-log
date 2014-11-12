@@ -9,6 +9,7 @@ $m = new Mustache_Engine(array(
 ));
 
 $data = array();
+$data["logged-in"] = false;
 $id = check_session();
 if($id > -1){
 	$data["logged-in"] = true;

@@ -32,7 +32,12 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="new_post.php">Captain's Log</a>
+          {{#logged-in}}
+            <a class="navbar-brand" href="new_post.php">Captain's Log</a>
+          {{/logged-in}}
+          {{^logged-in}}
+            <a class="navbar-brand" href="index.php">Captain's Log</a>
+          {{/logged-in}}
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav navbar-right">

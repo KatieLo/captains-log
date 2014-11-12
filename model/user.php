@@ -71,24 +71,13 @@ function check_session() {
 	global $dbh;
 	$session = $_SESSION["session_key"];
 
-	if ($session == "" || $session == false || $session == null) {
-		header("Location: login.php?message=session_expired");
-		die();
-	}
-
 	$stmt = $dbh -> prepare("SELECT id FROM user WHERE session=:session");
 	$stmt -> execute(array('session' => $session));
 	$id = -1;
 	foreach ($stmt as $row) {
 	    $id = $row["id"];
 	}
-
-	if ($id == -1) {
-		header("Location: login.php?message=session_expired");
-		die();
-	} else {
-		return $id;
-	}
+	return $id;
 }
 
 function check_login($email, $password) {

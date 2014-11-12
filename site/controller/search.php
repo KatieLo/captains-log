@@ -9,10 +9,16 @@ $m = new Mustache_Engine(array(
 
 // Prepare data
 $data = array();
+$data["logged-in"] = false;
 $id = check_session();
 if($id > -1){
-	$data["logged-in"] = true;
+    $data["logged-in"] = true;
+} else {
+    $has_message = true;
+    $data["extra_html"] = "Your session has expired. Please log in.";
 }
+$data["has_message"] = $has_message;
+
 $today = get_todays_date();
 	
 $data["search_term"] = $_POST['search'];
@@ -36,7 +42,11 @@ unset($result);
 
 // Render template
 echo $m->render('header', $data); 
-echo $m->render('results', $data); 
+if($data["logged-in"]){
+    echo $m->render('results', $data);     
+} else {
+    echo $m->render('login', $data); 
+}
 echo $m->render('footer'); 
 
 ?>
