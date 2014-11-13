@@ -9,12 +9,12 @@
   <h3>{{name}}, here are your past logs.</h3>
   {{#posts}}
   <div class="row">
-     <div class="col-xs-4 col-sm-2"><a href="log?date={{date}}">{{link_text}}</a></div>
+     <div class="col-xs-4 col-sm-2"><a href="/log?date={{date}}">{{link_text}}</a></div>
      <div class="col-xs-8 col-sm-10">{{content}}</div>
   </div>
  {{/posts}}
 {{/has_posts}}
 {{^has_posts}}
-  <h3>Your logbook is empty. How about logging today's entry <a href="new">now</a>?</h3>
+  <h3>Your logbook is empty. How about logging today's entry <a href="/new">now</a>?</h3>
 {{/has_posts}}
 </div>

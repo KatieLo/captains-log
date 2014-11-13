@@ -1,6 +1,6 @@
 
   <div class="container content">
-     <form method="post" action="search" class="navbar-form" role="search">
+     <form method="post" action="/search" class="navbar-form" role="search">
         <div class="form-group">
           <input type="text" class="form-control" name="search" placeholder="" value="{{search_term}}">
         </div>
@@ -11,7 +11,7 @@
         <h3>Search results for "{{search_term}}"</h3>
         {{#results}}
           <div class="row">
-             <div class="col-xs-4 col-sm-2"><a href="log?date={{date}}">{{link_text}}</a></div>
+             <div class="col-xs-4 col-sm-2"><a href="/log?date={{date}}">{{link_text}}</a></div>
              <div class="col-xs-8 col-sm-10">{{{highlighted_content}}}...</div>
           </div>
         {{/results}}
