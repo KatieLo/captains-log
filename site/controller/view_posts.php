@@ -10,14 +10,8 @@ $m = new Mustache_Engine(array(
 
 // Prepare data
 $data = array();
-$data["logged-in"] = false;
 $id = check_session();
-if($id > -1){
-	$data["logged-in"] = true;
-}else {
-    $has_message = true;
-    $data["extra_html"] = "Your session has expired. Please log in.";
-}
+$data["logged-in"] = true;
 $data["has_message"] = $has_message;
 $today = get_todays_date();
 $data["name"] = ucwords(get_name($id));
@@ -40,11 +34,7 @@ unset($post); // because $post is being passed by reference, after the foreach l
 
 // Render template
 echo $m->render('header', $data); 
-if($data["logged-in"]){
-	echo $m->render('view_posts', $data); 	
-} else {
-	echo $m->render('login', $data); 
-}
+echo $m->render('view_posts', $data); 
 echo $m->render('footer'); 
 
 ?>

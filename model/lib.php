@@ -2,7 +2,7 @@
 
 // Set up basic db access and settings 
 
-error_reporting(E_ALL);
+error_reporting(E_ERROR);
 
 session_start(); // run to use cookies 
 

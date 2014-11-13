@@ -10,7 +10,8 @@ $m = new Mustache_Engine(array(
 
 $data = array();
 $data["logged-in"] = false;
-$id = check_session();
+$redirect = false;
+$id = check_session($redirect);
 if($id > -1){
 	$data["logged-in"] = true;
 }
