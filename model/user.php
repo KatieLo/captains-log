@@ -72,7 +72,7 @@ function check_session($should_redirect = true) {
 	$session = $_SESSION["session_key"];
 	if ($session == "" || $session == false || $session == null) {
 		if($should_redirect) {
-			header("Location: login.php?message=session_expired");
+			header("Location: /login?message=session_expired");
 			die();			
 		}
 	}
@@ -83,7 +83,7 @@ function check_session($should_redirect = true) {
 	    $id = $row["id"];
 	}
 	if ($id == -1 && $should_redirect) {
-		header("Location: login.php?message=session_expired");
+		header("Location: /login?message=session_expired");
 		die();
 	} else {
 		return $id;
