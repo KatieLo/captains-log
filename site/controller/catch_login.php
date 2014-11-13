@@ -7,10 +7,10 @@ $password = $_POST["password"];
 
 $valid = check_login($email, $password);
 if($valid){
-	header("Location: new_post.php");
+	header("Location: new");
 	die();
 } else {
-	header("Location: login.php?message=invalid_login");
+	header("Location: login?message=invalid_login");
 	die();
 }
 

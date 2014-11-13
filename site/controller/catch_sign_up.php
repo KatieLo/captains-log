@@ -19,17 +19,17 @@ $email = $_POST["email"];
 */
 
 if(strlen($password) < 5) {
-	header("Location: sign_up.php?message=passwords_too_short");
+	header("Location: signup?message=passwords_too_short");
 	die();
 } else if($password != $password2) {
-	header("Location: sign_up.php?message=passwords_dont_match");
+	header("Location: signup?message=passwords_dont_match");
 	die();
 } else {
 	$new_id = create_new_user($password, $name, $email);
 	if($new_id < 0 ){
-		header("Location: sign_up.php?message=something_went_wrong");
+		header("Location: signup?message=something_went_wrong");
 	} else {
-		header("Location: new_post.php?message=welcome");
+		header("Location: signup?message=welcome");
 	}
 }
 
