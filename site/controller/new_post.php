@@ -20,7 +20,7 @@ $post = get_todays_post($id);
 $notification_text = "";
 	
 if($message == "welcome"){
-	$notification_text = "The trick to being productive is logging what you accomplish each day. Just write down what you did - even (or especially) if it's not a  lot.</div>";
+	$notification_text = "The trick to being productive is logging what you accomplish each day. Just write down what you did - even (or especially) if it's not a  lot.";
 	$has_message = true;
 } else if($message == "saved"){
 	$notification_text = "Your post was saved.";

@@ -140,6 +140,7 @@ function checkEmail(){
                     $(".warning").removeClass("hidden");
                     showWarning($email.parent());
                 } else {
+                    $(".warning").addClass("hidden");
                   showSuccess($email.parent());
                 }
             }
