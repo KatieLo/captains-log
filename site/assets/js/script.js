@@ -22,14 +22,14 @@ $( document ).ready(function() {
     	} else {
 			$.ajax( {
 				type: "POST",
-				url: "catch_new_post.php",
+				url: "/controller/catch_new_post.php",
 				data: $(this).serialize(),
 				success: function (response){
 					if(response == 1) {
 						$(".saved").show("400");
 						$(".saved").delay(1500).fadeOut("slow");
 					} else {
-						$(".error").html("Your log couldn't be saved. PLease try again.");
+						$(".error").html("Your log couldn't be saved. Please try again.");
                         $(".error").removeClass("hidden");
 					}
 				}
@@ -132,7 +132,7 @@ function checkEmail(){
         $(".error").addClass("hidden"); // remove warning if it is showing and user has fixed email 
        $.ajax( {
             type: "POST",
-            url: "catch_check_email.php",
+            url: "/controller/catch_check_email.php",
             data: {email:email},
             success: function (response){
                 if(response == 1) {
