@@ -29,7 +29,7 @@ if(strlen($password) < 5) {
 	if($new_id < 0 ){
 		header("Location: /signup?message=something_went_wrong");
 	} else {
-		header("Location: /signup?message=welcome");
+		header("Location: /new?message=welcome");
 	}
 }
 
