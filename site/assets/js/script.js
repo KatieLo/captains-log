@@ -29,7 +29,7 @@ $( document ).ready(function() {
 						$(".saved").show("400");
 						$(".saved").delay(1500).fadeOut("slow");
 					} else {
-						$(".error").html("Your log couldn't be saved. Please try again.");
+						$(".error").html("Your log couldn't be saved. Please try again. error echo: "+response+".");
                         $(".error").removeClass("hidden");
 					}
 				}
