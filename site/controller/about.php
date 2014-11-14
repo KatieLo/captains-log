@@ -11,7 +11,7 @@ $m = new Mustache_Engine(array(
 $data = array();
 $data["logged-in"] = false;
 $redirect = false;
-$id = check_session($redirect);
+$id = check_session($redirect); // are the other check_session() breaking because not being passes $redirect?
 if($id > -1){
 	$data["logged-in"] = true;
 }
