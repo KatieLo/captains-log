@@ -1,4 +1,4 @@
-captains_log
+Captain's Log Productivity Web App
 ============
 
 Captains log is a simple, quick way to improve your productivity by logging what you accomplish each day. 
